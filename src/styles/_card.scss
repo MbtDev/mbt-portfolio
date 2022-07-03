@@ -1,0 +1,30 @@
+.card-link {
+    text-decoration: none;
+    color: white;
+    //opacity: 0;
+}
+
+.card {
+    cursor: pointer;
+    filter: saturate(1);
+    
+
+    @include md {
+        filter: saturate(0);
+    }
+
+    &:hover {
+        filter: saturate(1);
+    }
+
+    .minia {
+        height: 100%;
+        min-width: 90%;
+        //border-radius: 4px;
+    }
+}
+
+.project-type {
+    margin-top: 8px;
+    font-size: x-small;
+}

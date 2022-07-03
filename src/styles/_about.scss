@@ -1,0 +1,60 @@
+
+.about-section {
+    // margin: 2rem;
+    background-color: white;
+    width: fit-content;
+    height: 100%;
+    display: grid;
+    padding: 1rem;
+    //width: calc(100vw - 15%);
+    //margin: auto;
+    color: black;
+    font-family: "khand-Light";
+    text-align: left;
+
+    @include lg {
+        margin: 0;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .story {
+        @include lg {
+            width: 70%;
+        }
+    }
+
+    .skills-services {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+        place-self: center;
+        font-weight: 100;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        .bold,
+        .separator {
+            font-weight: 900;
+        }
+    }
+
+    @include lg {
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+    }
+
+    .contact {
+        text-align: center;
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        text-decoration: underline;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.layoutpv-section {
+    height: calc(100vh - 8rem);
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+
+    .layoutpv-title {
+        font-size: 4rem;
+        //background-color: pink;
+        text-align: center;
+    }
+}
+
+.layout {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: $gradient-background;
+
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+
+    .navbar {
+        //background-color: green;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-align: center;
+        place-self: center;
+        width: 100%;
+
+        a {
+            text-decoration: none;
+            color: white;
+            text-decoration: underline;
+
+            &:first-of-type {
+                float: left;
+                margin-left: 0.5rem;
+            }
+
+            &:last-of-type {
+                float: right;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    .content {
+        //background-color: pink;
+        height: 100%;
+        max-height: fit-content;
+    }
+
+    .footer {
+        //background-color: aquamarine;
+        align-self: flex-end;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+
+        .darkbar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: $dark-blue;
+            color: white;
+
+            margin: auto;
+
+            width: calc(100vw - 2rem);
+            @include lg {
+                width: calc(100vw - 20rem);
+            }
+
+            .randomnumber {
+                place-self: flex-start;
+            }
+
+            .date {
+                place-self: flex-end;
+            }
+        }
+
+        .mbt-logo-footer {
+            justify-self: center;
+        }
+    }
+}
+
+.overlay {
+    background: $viride;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    color: white;
+}

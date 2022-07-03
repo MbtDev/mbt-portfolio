@@ -1,0 +1,147 @@
+@import url("https://use.typekit.net/byr5ath.css");
+@import "abstracts/colors";
+@import "abstracts/fonts";
+@import "media-queries.scss";
+@import "home.scss";
+@import "contact.scss";
+@import "projects.scss";
+@import "card.scss";
+@import "project-details.scss";
+@import "livamo.scss";
+@import "layoutpv.scss";
+@import "title-content-layout.scss";
+@import "about.scss";
+
+
+* {
+    margin: 0;
+    font-family: "khand-Variable";
+    /*-ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+
+    --fs-xl: clamp(3.5rem, 12vw + 1rem, 10rem);
+    --fs-l: clamp(1.5rem, 12vw + 10rem, 1.5rem);
+    --fs-m:  
+    --fs-r: clamp(1rem, 40vw + 2rem, 1rem);
+    --fs-s: clamp(0.5rem, 40vw + 2rem, 0.5rem);
+}
+
+p{
+    font-family: 'GeneralSans-Extralight';
+}
+
+a{
+    font-family: 'Khand-SemiBold';
+}
+
+.text {
+    opacity: 0;
+}
+
+
+
+#svg {
+    fill: red;
+}
+
+
+.linkmenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 64px;
+}
+
+.navlink {
+    background-color: $dark-orange;
+    text-decoration: none;
+    color: white;
+    padding: 16px 16px 16px 16px;
+    text-align: center;
+    font-size: 13px;
+    width: 100px;
+    transform: scale(0);
+
+    @include md {
+        padding: 8px 16px 8px 16px;
+        font-size: 20px;
+        width: 100px;
+    }
+    position: fixed;
+    bottom: 64px;
+
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.controls-section {
+    display: grid;
+    justify-items: center;
+    right: 16px;
+    top: 16px;
+    position: absolute;
+    gap: 64px;
+
+    .exiticon {
+        height: fit-content;
+    }
+
+    @include md {
+        height: 90%;
+        justify-items: flex-end;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    & > * {
+        text-decoration: none;
+        color: white;
+        font-size: xx-large;
+        z-index: 1;
+    }
+
+    .nextproject-mobile {
+        @include md {
+            display: none;
+        }
+    }
+
+    .nextproject {
+        display: none;
+        @include md {
+            display: grid;
+
+            grid-template-columns: 1fr;
+            background-color: $dark-blue;
+            z-index: 1;
+            width: fit-content;
+            float: right;
+
+            place-self: flex-end;
+            text-decoration: none;
+            color: white;
+            margin: 8px;
+
+            font-size: xx-large;
+
+            &:hover {
+                color: $dark-orange;
+            }
+        }
+    }
+}

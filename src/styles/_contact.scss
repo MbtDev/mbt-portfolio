@@ -1,0 +1,39 @@
+
+.contact-section {
+    display: grid;
+    grid-template-rows: auto;
+
+    width: 100%;
+    .icons-section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        //margin: 1rem;
+
+        .icon-section {
+            .icon {
+                width: 50%;
+                @include md {
+                    width: 20%;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .based {
+        justify-self: center;
+        margin-top: 3rem;
+    }
+
+    .recheck{
+        text-align: center;
+        color: white;
+        margin-top: 3rem;
+    }
+}

@@ -1,0 +1,72 @@
+.home-section {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto;
+
+    .title {
+        font-size: var(--fs-xl);
+        border-top: 8px solid;
+        border-bottom: 8px solid;
+        width: fit-content;
+        margin: auto;
+        font-family: "khand-bold";
+        color: white;
+    }
+
+    .function-section {
+        
+        font-size: var(--fs-m);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: $dark-blue;
+        color: $viride;
+        justify-items: center;
+
+        margin: auto;
+        padding: 0.5rem;
+        width: calc(100vw - 2rem);
+        @include lg {
+            width: auto;
+            gap: 5rem;
+            font-size: var(--fs-l);
+        }
+
+        align-self: flex-start;
+    }
+
+    .keep {
+        text-align: center;
+        font-family: "khand-light";
+        align-self: center;
+    }
+
+    .button-section {
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        margin: auto;
+        cursor: pointer;
+
+        .blocks {
+            display: flex;
+
+            .block {
+                width: 20px;
+                height: 60px;
+                display: flex;
+                gap: 1;
+                background-color: $dark-blue;
+                border-radius: 4px;
+            }
+        }
+
+        .label {
+            position: absolute;
+            width: max-content;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    }
+}
