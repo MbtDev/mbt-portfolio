@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/mbt-portfolio",
   siteMetadata: {
     title: `Freelance Developer - Designer`,
     description: `Freelance developer Designer & Photo, Video in Brussels`,
